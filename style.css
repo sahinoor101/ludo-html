@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(61, 62, 63, 0.384);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  border: 0.1px solid rgba(0, 0, 0, 0.091);
+}
+
+/* "r r r r r r w w w g g g g g g"
+    "r r r r r r w g g g g g g g g"
+    "r r r r r r w g w g g g g g g"
+    "r r r r r r w g w g g g g g g"
+    "r r r r r r w g w g g g g g g"
+    "r r r r r r w g w g g g g g g"
+    "w r w w w w x x x w w w w w w"
+    "w r r r r r x x x y y y y y w"
+    "w w w w w w x x x w w w w y w"
+    "b b b b b b w b w y y y y y y"
+    "b b b b b b w b w y y y y y y"
+    "b b b b b b w b w y y y y y y"
+    "b b b b b b w b w y y y y y y"
+    "b b b b b b b b w y y y y y y"
+    "b b b b b b w w w y y y y y y"   */
+.red > .box {
+  background-color: red;
+}
+.red,
+.green,
+.blue,
+.yellow {
+  display: grid;
+  grid-template-rows: repeat(6, 50px);
+  grid-template-columns: repeat(6, 50px);
+}
+.green > .box {
+  background-color: green;
+}
+
+.blue > .box {
+  background-color: blue;
+}
+.yellow > .box {
+  background-color: yellow;
+}
+.path {
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+  grid-template-rows: repeat(6, 50px);
+}
+.pathw {
+  display: grid;
+  grid-template-columns: repeat(15, 50px);
+  grid-template-rows: repeat(3, 50px);
+}
+.path > .box,
+.pathw > .box {
+  background-color: white;
+}
+
+.red {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.path1 {
+  position: fixed;
+  top: 0;
+  left: 300px;
+}
+.green {
+  position: fixed;
+  top: 0;
+  left: 450px;
+}
+.blue {
+  position: fixed;
+  top: 450px;
+  left: 0;
+}
+.yellow {
+  position: fixed;
+  top: 450px;
+  left: 450px;
+}
+.path2 {
+  position: fixed;
+  top: 450px;
+  left: 300px;
+}
+.pathw {
+  position: fixed;
+  top: 300px;
+  left: 0;
+}
+.pathw > .c {
+  background-color: purple;
+}
+.path1 > .g {
+  background-color: green;
+}
+.path2 > .g {
+  background-color: blue;
+}
+.pathw > .r {
+  background-color: red;
+}
+.pathw > .y {
+  background-color: yellow;
+}
+.red .c,
+.green .c,
+.blue .c,
+.yellow .c {
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+  padding: 10px;
+}
+
+/* .red .w ,.green .w , .blue .w ,.yellow .w{
+    background-color: white;
+} */
