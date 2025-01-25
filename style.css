@@ -8,7 +8,7 @@ body {
   align-items: center;
 }
 .box {
-  border: 0.1px solid rgba(0, 0, 0, 0.091);
+  /* border: 0.1px solid rgba(0, 0, 0, 0.091); */
 }
 
 /* "r r r r r r w w w g g g g g g"
